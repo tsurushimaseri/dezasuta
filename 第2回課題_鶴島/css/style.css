@@ -1,5 +1,35 @@
 @charset "UTF-8";
 
+
+/* work1-1,1-2 */
+
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    background: blue;
+}
+
+.six {
+    flex-wrap: wrap;
+}
+
+.red {
+    background-color: red;
+}
+
+
+
+
+/* work1-3,2-1 */
+
 body {
     background-color: gray;
     margin: 100px 0;
@@ -8,51 +38,44 @@ body {
 .nav {
     display: flex;
     max-width: 960px;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
-    width: 960px;
     height: 70px;
     background: white;
+    padding: 0 100px;
 }
 
 .menu { 
     display: flex; 
-    gap: 30px;
 }
 
 li {
     border-right: 1px solid;
     padding-right: 30px;
+    padding: 7px 30px;
 }
 
 li:last-of-type {
-    border: none;
+    border-right: none;
 }
 
-h1 {
-    text-align: start;
-}
 
 @media screen and (max-width: 767px) {
     .nav {
         display: block;
         width: 60%;
         height: 100%;
-        background: white;
         margin: 5% 20%;
         padding: 3%; 
     }
 
-    .menu {display: block;
+    .menu {
+        display: block;
     }
 
-    li {
+    .menu li {
         border-right: none;
         border-bottom: 1px solid; 
         padding: 10px;
-    }
-
-    li:last-of-type {
-        border-bottom: 1px solid;
     }
 }
