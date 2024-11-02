@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body{
+    max-width: 960px;
+    background-color: #eeeeee;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: cadetblue;
+    margin: 50px;
+}
+
+h2 {
+    color: cadetblue;
+    border-left: 8px solid;
+    padding-left: 5px;
+    margin: 3px;
+    margin-bottom: 10px;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    background-color: white;
+    margin: 10px;
+}
+
+p {
+    margin: 4px;
+    line-height: 25px;
+}
+
+.text {
+    padding: 10px 5px;
+}
+
+img {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 400px) {
+    .service {
+        display: block;
+    }
+    .box {
+        margin: 30px 10px;
+    }
+    h2 {
+        margin-bottom: 15px;
+    }
+}
