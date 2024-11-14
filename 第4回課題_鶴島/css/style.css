@@ -39,9 +39,13 @@ header {
     text-align: center;
 }
 
+a:hover {
+    color: gray;
+}
+
 #top {
     max-width: 1000px;
-    margin: 0 24%;
+    margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
@@ -52,32 +56,35 @@ header {
     margin: 5% auto 2% auto;
 }
 
-h1 {
+.happy {
     font-size: 82px;
+    line-height: 0.9;
 }
 
 .mainichi {
     font-size: 23px;
-    line-height: ;
+    line-height: 1.65;
     margin: 1% auto 5% auto;
 }
 
 #about_us {
     max-width: 1000px;
-    margin: 0 24%;
+    margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .coffee {
     height: 30%;
+    width: 50%;
     border-bottom-right-radius: 82px;
 }
 
 .about {
-    margin-left: 4%;
+    width: 41%;
 }
 
 .subtitle_au {
@@ -86,7 +93,7 @@ h1 {
     margin: 3% auto 2% auto;
 }
 
-h3 {
+.watashi {
     font-size: 44px;
     margin-bottom: 1%;
 }
@@ -97,7 +104,7 @@ p {
 
 #menu {
     max-width: 1000px;
-    margin: 0 24%;
+    margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -112,6 +119,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2%;
 }
 
 .menu_photo {
@@ -119,7 +127,7 @@ p {
     border-top-right-radius: 41px;
 }
 
-h4 {
+.category {
     font-size: 38px;
     color: #d30202;
 }
@@ -128,7 +136,7 @@ h4 {
     font-size: 17px;
 }
 
-.galley_photo {
+.gallery_photo {
     display: flex
 }
 
@@ -146,7 +154,7 @@ h4 {
 
 #event {
     max-width: 1000px;
-    margin: 0 24%;
+    margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -163,8 +171,14 @@ h4 {
     background-color: #fff;
 }
 
-th {
-    padding-right: 3%;
+table {
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+
+td {
+    border-bottom: 1px solid;
 }
 
 .subtitle_access {
@@ -187,7 +201,7 @@ footer {
 .footer_block {
     display: flex;
     max-width: 1000px;
-    margin: 0 24%;
+    margin: 0 auto;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -204,6 +218,10 @@ footer {
 .footer_copy {
     text-align: center;
     padding-bottom: 4%;
+}
+
+.return {
+    width: 6%;
 }
 
 
