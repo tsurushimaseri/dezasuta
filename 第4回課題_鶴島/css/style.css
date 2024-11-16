@@ -53,18 +53,20 @@ a:hover {
 
 .have {
     font-size: 30px;
-    margin: 5% auto 2% auto;
+    margin-top: 104px;
+    margin-bottom: 47px;
 }
 
 .happy {
     font-size: 82px;
-    line-height: 0.9;
+    line-height: 1.17;
 }
 
 .mainichi {
     font-size: 23px;
     line-height: 1.65;
-    margin: 1% auto 5% auto;
+    margin-top: 19px;
+    margin-bottom: 93px;
 }
 
 #about_us {
@@ -90,16 +92,17 @@ a:hover {
 .subtitle_au {
    align-items: center;
     width: 272px;
-    margin: 3% auto 2% auto;
 }
 
 .watashi {
     font-size: 44px;
-    margin-bottom: 1%;
+    line-height: 1.38;
+    margin-top: 48px;
+    margin-bottom: 23px;
 }
 
-p {
-    font-size: 16px;
+.service {
+    line-height: 1.62;
 }
 
 #menu {
@@ -112,7 +115,8 @@ p {
 .subtitle_menu {
     align-items: center;
     width: 151px;
-    margin: 5% auto 2% auto;
+    margin: 95px auto 39px auto;
+    margin-bottom: 39px;
 }
 
 .menu_wrap {
@@ -120,6 +124,7 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 2%;
+    position: relative;
 }
 
 .menu_photo {
@@ -129,11 +134,23 @@ p {
 
 .category {
     font-size: 38px;
-    color: #d30202;
+    color: rgba(211, 2, 2, 0.7);
+    position: absolute;
+    top: 187px;
 }
 
 .menu_text {
     font-size: 17px;
+    line-height: 1.47;
+    width: 300px;
+    height: 116px;
+    margin-top: 44px;
+}
+
+.subtitle_galley {
+    align-items: center;
+    width: 245px;
+    margin: 38px auto 17px auto;
 }
 
 .gallery_photo {
@@ -143,13 +160,6 @@ p {
 .line {
     width: 20%;
     box-sizing: border-box;
-    padding: 0;
-}
-
-.subtitle_galley {
-    align-items: center;
-    width: 245px;
-    margin: 22% auto 1% auto;
 }
 
 #event {
@@ -162,29 +172,31 @@ p {
 .subtitle_event {
     align-items: center;
     width: 174px;
-    margin: 3% auto 1% auto;
+    margin: 59px auto 30px auto;
 }
 
 .box {
-    padding: 2% 8%;
+    width: 100%;
+    height: 200px;
     border: 3px solid #4f260b;
     background-color: #fff;
-}
-
-table {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 3%;
 }
 
-td {
-    border-bottom: 1px solid;
+.event_text {
+    font-size: 23px;
+}
+
+.text_link {
+    text-decoration: underline;
 }
 
 .subtitle_access {
     align-items: center;
     width: 214px;
-    margin: 3% auto 2% auto;
+    margin: 68px auto 37px auto;
 }
 
 iframe {
@@ -208,22 +220,131 @@ footer {
 
 .footer_logo {
     width: 227px;
-    padding-top: 4%;
+    margin-top: 75px;
 }
 
 .footer_text {
-    margin: 4% 43% 4% 3%;
+    font-size: 20px;
+    line-height: 1.95;
+    margin-top: 75px;
+    margin-left: 64px;
+    margin-bottom: 73px;
 }
 
 .footer_copy {
     text-align: center;
-    padding-bottom: 4%;
+    padding-bottom: 75px;
 }
 
 .return {
-    width: 6%;
+    position: fixed;
+    width: 125px;
+    height: 125px;
+    right: 40px;
+    bottom: 40px;
 }
 
+
+/* スマホ版メニュー */
+
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        /* 位置の調整 */
+        position: absolute;
+        top: 21px;
+        right: 25px;
+        /* 重なり具合 */
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ばつ印 */
+
+    .sp_btn.open span {
+        background: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* メニューの見た目 */
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0,0,0,0.8);
+        /* 重なり具合 */
+        z-index: 1;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 40px;
+    }
+    
+    .sp_nav ul li {
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+
+
+}
 
 /* 
 a {

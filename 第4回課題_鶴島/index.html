@@ -6,12 +6,16 @@
     <title>Design cafe</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
         <div class="header_slider">
             <div>
-                <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                <picture>
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)" >
+                    <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
             </div>
         </div>
         <div class="header_wrap">
@@ -19,6 +23,18 @@
                 <img src="./images/design_cafe_logo_header@2x.png">
             </h1>
             <nav class="pc_nav">
+                <ul>
+                    <li><a href="index.html#about_us">ABOUT US</a></li>
+                    <li><a href="index.html#menu">MENU</a></li>
+                    <li><a href="index.html#gallery">GALLERY</a></li>
+                    <li><a href="index.html#event">EVENT</a></li>
+                    <li><a href="index.html#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="index.html#about_us">ABOUT US</a></li>
                     <li><a href="index.html#menu">MENU</a></li>
@@ -47,7 +63,7 @@
                 <p class="watashi">私たちが提供する<br>
                     こだわりのコーヒー
                 </p>
-                <p>サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
+                <p class="service">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
             </div> 
         </section> 
         <section id="menu">
@@ -88,22 +104,20 @@
             <h2 class="subtitle_event">
                 <img src="./images/event@2x.png" alt="EVENT">
             </h2>
-            <div class="box">
-                <table>
-                    <tr>
-                        <th>2020.06.23</th>
-                        <td>7月はイベント出店のため0/0お休みします</td>
+            <table class="box" cellspacing="25">
+                <tr>
+                    <td class="event_text">2020.06.23</td>
+                    <td class="event_text text_link">7月はイベント出店のため0/0お休みします</td>
+                </tr>
+                <tr>
+                    <td class="event_text">2020.03.15</td>
+                    <td class="event_text text_link">春の新商品新発売。話題のあのブランドとコラボ</td>
+                </tr>
+                <tr>
+                     <td class="event_text">2020.02.06</td>
+                    <td class="event_text text_link">コーヒーの日で30％OFFイベントを開催［3日間限定］</td>
                     </tr>
-                    <tr>
-                        <th>2020.03.15</th>
-                        <td>春の新商品新発売。話題のあのブランドとコラボ</td>
-                    </tr>
-                    <tr>
-                        <th>2020.02.06</th>
-                        <td>コーヒーの日で30％OFFイベントを開催［3日間限定］</td>
-                    </tr>
-                </table>
-            </div>
+            </table>
         </section>
         <section id="access">
             <h2 class="subtitle_access">
@@ -133,5 +147,13 @@
             <img class="return" src="./images/to_top@2x.png" alt="TOPへ戻る">
         </a>
     </footer>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click',function(){
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+    </script>
 </body>
 </html>

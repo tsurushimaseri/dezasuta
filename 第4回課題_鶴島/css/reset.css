@@ -44,3 +44,7 @@ img {
   vertical-align: bottom;
   border: none;
 }
+
+p {
+  font-size: 16px;
+}
