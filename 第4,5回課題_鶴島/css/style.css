@@ -60,11 +60,13 @@ a:hover {
 .happy {
     font-size: 82px;
     line-height: 1.17;
+    letter-spacing: 0.1em;
 }
 
 .mainichi {
     font-size: 23px;
     line-height: 1.65;
+    letter-spacing: 0.1em;
     margin-top: 19px;
     margin-bottom: 93px;
 }
@@ -79,10 +81,15 @@ a:hover {
     justify-content: space-between;
 }
 
-.coffee {
+.pc_coffee {
+    display: block;
     height: 30%;
     width: 50%;
     border-bottom-right-radius: 82px;
+}
+
+.sp_coffee {
+    display: none;
 }
 
 .about {
@@ -123,26 +130,36 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2%;
+}
+
+.menu_block {
+    width: 30%;
+}
+
+.menu_block > div {
     position: relative;
 }
 
-.menu_photo {
+.pc_menu_photo {
+    display: block;
     width: 156%;
     border-top-right-radius: 41px;
 }
 
+.sp_menu_photo {
+    display: none;
+}
+
 .category {
     font-size: 38px;
-    color: rgba(211, 2, 2, 0.7);
+    color: #d30202;
     position: absolute;
-    top: 187px;
+    top: 94%;
 }
 
 .menu_text {
     font-size: 17px;
     line-height: 1.47;
-    width: 300px;
     height: 116px;
     margin-top: 44px;
 }
@@ -344,7 +361,139 @@ footer {
     }
 
 
+/* トップ */
+
+#top {
+    margin: 0 auto;
 }
+
+.have {
+    font-size: 17px;
+}
+
+.happy{
+    font-size: 38px;
+}
+
+.mainichi {
+    font-size: 16px;
+}
+
+
+/* about_us */
+
+#about_us {
+    display: contents;
+    margin: 0 auto;
+}
+
+.pc_coffee {
+    display: none;
+}
+
+.sp_coffee {
+    display: block;
+}
+
+.subtitle_au {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.watashi {
+    width: 286px;
+    font-size: 36px;
+}
+
+.service {
+    width: 335px;
+    font-size: 16px;
+}
+
+
+/* メニュー */
+
+.subtitle_menu {
+    width: 88px;
+    margin: 0 auto;
+}
+
+.menu_wrap {
+    display: contents;
+    margin: o auto;
+}
+
+.menu_block {
+    width: 300px;
+}
+
+.pc_menu_photo {
+    display: none;
+}
+
+.sp_menu_photo {
+    display: block;
+    border-top-right-radius: 41px;
+}
+
+.menu_text {
+    font-size: 17px;
+}
+
+
+/* ギャラリー */
+
+.subtitle_galley {
+    width: 142px;
+    margin: o auto;
+}
+
+.gallery_photo {
+    display: block;
+}
+
+.line {
+    width: 375px;
+}
+
+
+/* イベント */
+
+#event {
+    margin: 0 auto;
+}
+
+.subtitle_event {
+    width: 100px;
+}
+
+
+/* アクセス */
+
+#access {
+    margin: 0 auto;
+}
+
+.subtitle_access {
+    width: 124px;
+}
+
+
+/* フッター */
+
+.footer_block {
+    display: block;
+}
+
+.footer_logo {
+    padding-top: 41px;
+}
+
+
+}
+
+
+
 
 /* 
 a {
