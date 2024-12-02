@@ -61,7 +61,7 @@
             <p class="have">Have a happy day From a cup of coffee.</p>
             <p class="happy">ハッピーに溢れる1日を <br>
                 1杯のコーヒーから。</p>
-            <p class="mainichi">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ <br>
+            <p class="mainichi">毎日を丁寧に大切に過ごしたい。<br class="sp_br">だからこそ一杯一杯丁寧にコーヒーを入れ <br>
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
         </section>
         <section id="about_us">   
@@ -112,13 +112,14 @@
             <h2 class="subtitle_galley">
                 <img src="./images/gallery@2x.png" alt="GALLERY">
             </h2>
-            <div class="gallery_photo">
-                <img class="line1" src="./images/pc_gallary_05-100.jpg" alt="">
-                <img class="line2" src="./images/pc_gallary_04-100.jpg" alt="">
-                <img class="line3" src="./images/pc_gallary_03-100.jpg" alt="">
-                <img class="line4" src="./images/pc_gallary_02-100.jpg" alt="">
-                <img class="line5" src="./images/pc_gallary_01-100.jpg" alt="">
-            </div>
+                <div class="gallery_photo">
+                    <img class="line1" src="./images/pc_gallary_05-100.jpg" alt="">
+                    <img class="line2" src="./images/pc_gallary_04-100.jpg" alt="">
+                    <img class="line3" src="./images/pc_gallary_03-100.jpg" alt="">
+                    <img class="line4" src="./images/pc_gallary_02-100.jpg" alt="">
+                    <img class="line5" src="./images/pc_gallary_01-100.jpg" alt="">
+                    <img class="line1" src="./images/pc_gallary_05-100.jpg" alt="">
+                </div>
         </section>
         <section id="event">
             <h2 class="subtitle_event">
@@ -176,12 +177,53 @@
             })
 
             $('.header_slider').slick({
-                // autoplay: true,
+                autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
                 arrows: false,
             })
-        })
+
+            $('.gallery_photo').slick({
+                isFinite: true,
+                slidesToShow:5,
+                slidesToScroll:1
+            });
+
+            $('.gallery_photo').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                    },
+                    {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                    // 指定したブレイクポイントでslickを無効化するには
+                    // オブジェクトの代わりに settings: "unslick" を指定します。
+                ]
+                });
+        });
     </script>
 </body>
 </html>

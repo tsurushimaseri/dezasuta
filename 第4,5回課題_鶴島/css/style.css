@@ -71,6 +71,10 @@ a:hover {
     margin-bottom: 93px;
 }
 
+.sp_br {
+    display: none;
+}
+
 #about_us {
     max-width: 1000px;
     margin: 0 auto;
@@ -407,6 +411,10 @@ footer {
     line-height: 1.875;
 }
 
+.sp_br {
+    display: block;
+}
+
 
 /* about_us */
 
@@ -498,6 +506,9 @@ footer {
     display: block;
 }
 
+
+
+
 .line3 {
     width: 100%;
 }
@@ -518,7 +529,6 @@ footer {
 
 table td {
     display: block;
-    max-width: 290px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -531,11 +541,12 @@ table td {
 
 .event_text {
     font-size: 16px;
-    width: 290px;
 }
 
 .box {
     padding: 20px;
+    display: table;
+    table-layout: fixed;
 }
 
 
@@ -553,6 +564,10 @@ table td {
     width: 100%;
 }
 
+iframe {
+    height: 191px;
+}
+
 
 /* フッター */
 
@@ -564,6 +579,7 @@ table td {
     padding-top: 40px;
     padding-bottom: 20px;
     padding-left: 20px;
+    margin-top: 0;
     width: 226px;
 }
 
@@ -575,8 +591,17 @@ table td {
 }
 
 .footer_copy{
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 30px;
+}
+
+.return {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    bottom: 190px;
+    /* right: 40px;
+    bottom: 40px; */
 }
 
 }
@@ -588,7 +613,7 @@ table td {
 /* レスポンシブ外 */
 
 
-/* スライダー */
+/* スライダー　メインビジュアル */
 
 .slick-dots {
     bottom: 20px;
@@ -604,3 +629,10 @@ table td {
 }
 
 
+/* スライダー ギャラリー */
+
+.slick-next {
+    border-top: 3px solid white;
+    border-right: 3px solid white;transform: rotate(45deg);
+    right: 20%;
+}
