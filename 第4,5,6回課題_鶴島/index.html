@@ -184,16 +184,8 @@
             })
 
             $('.gallery_photo').slick({
-                isFinite: true,
-                slidesToShow:5,
-                slidesToScroll:1
-            });
-
-            $('.gallery_photo').slick({
-                dots: true,
-                infinite: false,
                 speed: 300,
-                slidesToShow: 4,
+                slidesToShow: 5,
                 slidesToScroll: 1,
                 responsive: [
                     {
@@ -201,12 +193,10 @@
                     settings: {
                         slidesToShow: 3,
                         slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
                     }
                     },
                     {
-                    breakpoint: 600,
+                    breakpoint: 767,
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1
@@ -219,8 +209,6 @@
                         slidesToScroll: 1
                     }
                     }
-                    // 指定したブレイクポイントでslickを無効化するには
-                    // オブジェクトの代わりに settings: "unslick" を指定します。
                 ]
                 });
         });
