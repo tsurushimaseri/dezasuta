@@ -267,6 +267,49 @@ footer {
 
 
 
+/* レスポンシブ外 */
+
+
+/* スライダー メインビジュアル */
+
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button::before {
+    color: #fff;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+
+/* スライダー ギャラリー */
+
+.slick-next {
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    right: 20%;
+}
+
+.slick-next::before,
+.slick-prev::before {
+    content: "";
+}
+
+.slick-prev {
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(225deg);
+    left: 20%;
+    z-index: 100;
+}
+
+
+
 
 /* スマホ版メニュー */
 
@@ -519,18 +562,11 @@ footer {
 }
 
 .slick-next {
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(45deg);
     right: 7%;
 }
 
 .slick-prev {
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(225deg);
     left: 7%;
-    z-index: 100;
 }
 
 
@@ -619,46 +655,4 @@ iframe {
 
 
 
-
-
-/* レスポンシブ外 */
-
-
-/* スライダー メインビジュアル */
-
-.slick-dots {
-    bottom: 20px;
-}
-
-.slick-dots li.slick-active button:before,
-.slick-dots li button::before {
-    color: #fff;
-}
-
-.slick-dotted.slick-slider {
-    margin-bottom: 0;
-}
-
-
-/* スライダー ギャラリー */
-
-.slick-next {
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(45deg);
-    right: 20%;
-}
-
-.slick-next::before,
-.slick-prev::before {
-    content: "";
-}
-
-.slick-prev {
-    border-top: 3px solid white;
-    border-right: 3px solid white;
-    transform: rotate(225deg);
-    left: 20%;
-    z-index: 100;
-}
 
